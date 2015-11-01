@@ -90,3 +90,8 @@ func benchMemMove(b *testing.B, f func(dst, src *[2048]byte)) {
 // BenchmarkMemMove-4    	20000000	        85.1 ns/op	24056.98 MB/s
 // BenchmarkMemMoveSSE2-4	30000000	        44.4 ns/op	46176.00 MB/s
 // BenchmarkMemMoveAVX-4 	50000000	        24.3 ns/op	84248.36 MB/s
+
+// Intel(R) Xeon(R) CPU E5-1650 0 @ 3.20GHz
+// BenchmarkMemMove-12     20000000                84.1 ns/op      24357.54 MB/s
+// BenchmarkMemMoveSSE2-12 30000000                37.5 ns/op      54555.20 MB/s
+// BenchmarkMemMoveAVX-12  30000000                38.2 ns/op      53670.40 MB/s
