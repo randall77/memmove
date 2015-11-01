@@ -84,3 +84,8 @@ func benchMemMove(b *testing.B, f func(dst, src *[2048]byte)) {
 // BenchmarkMemMoveSSE2-8	50000000	        37.1 ns/op	55234.76 MB/s
 // BenchmarkMemMoveAVX-8 	50000000	        37.1 ns/op	55229.94 MB/s
 // (prefetch doesn't help, aligned reads/writes don't help)
+
+// Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz
+// BenchmarkMemMove-4    	20000000	        85.1 ns/op	24056.98 MB/s
+// BenchmarkMemMoveSSE2-4	30000000	        44.4 ns/op	46176.00 MB/s
+// BenchmarkMemMoveAVX-4 	50000000	        24.3 ns/op	84248.36 MB/s
