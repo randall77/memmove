@@ -81,6 +81,7 @@ func benchMemMove(b *testing.B, f func(dst, src *[2048]byte)) {
 
 // Results:
 // 3.7 GHz Quad-Core Intel Xeon E5
+// BenchmarkMemMove-8    	20000000	        77.5 ns/op	26413.79 MB/s
 // BenchmarkMemMoveSSE2-8	50000000	        37.1 ns/op	55234.76 MB/s
 // BenchmarkMemMoveAVX-8 	50000000	        37.1 ns/op	55229.94 MB/s
 // (prefetch doesn't help, aligned reads/writes don't help)
